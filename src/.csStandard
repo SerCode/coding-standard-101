@@ -1,0 +1,4 @@
+[ruleset]
+0 = vendor/titulkar/coding-standard-101/src/ruleset.xml
+
+[packages]

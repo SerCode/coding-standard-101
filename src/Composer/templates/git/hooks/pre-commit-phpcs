@@ -1,0 +1,17 @@
+### coding-standard-101 -start 
+# get changed .php files, ready to be commited, all but deleted
+FILES=$(git diff --name-only --cached --diff-filter=ACMRTUXB | grep .php);
+
+# run phpcs
+if [ ! -z "$FILES" ]; then
+	printf "Running Code Sniffer...\n\n"
+	vendor/bin/phpcs --config-set ignore_warnings_on_exit 1
+	vendor/bin/phpcs $FILES --standard=%s
+
+	if [ $? -ne 0 ]
+	then
+		printf "\033[0;41;37mFix coding standards before commit!\033[0m\n"
+		exit 1
+	fi
+fi
+### coding-standard-101 -end

@@ -42,8 +42,8 @@ In case you don't want to use Php_CodeSniffer manually for every change in the c
 ```json
 "scripts": {
     "cs-install-prehook": [
-		"Titulkar\\CodingStandard101\\Composer\\ScriptHandler::addPhpCsToPreCommitHook"
-	],
+		"SerCode\\CodingStandard101\\Composer\\ScriptHandler::addPhpCsToPreCommitHook"
+	]
 }		
 ````	
 
@@ -64,8 +64,8 @@ composer cs-install-prehook
 		"@cs-install-prehook"
 	],  
 	"cs-install-prehook": [
-		"Titulkar\\CodingStandard101\\Composer\\ScriptHandler::addPhpCsToPreCommitHook"
-	],
+		"SerCode\\CodingStandard101\\Composer\\ScriptHandler::addPhpCsToPreCommitHook"
+	]
 }
 ```
 

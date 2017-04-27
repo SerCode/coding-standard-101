@@ -107,6 +107,16 @@ and run
 ***
 ## Advanced usage
 
+*(will be added)*
+
+You can create own rulest.
+
+Create confgi file `.csStandard` with path to ruleset, inport differetn packages with codding 
+standards and use them in your `ruleset.xml`.
+
+....
+
+
 ***
 Inspired by https://github.com/DeprecatedPackages/CodingStandard
 

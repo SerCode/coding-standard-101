@@ -10,8 +10,11 @@ if [ ! -z "$FILES" ]; then
 
 	if [ $? -ne 0 ]
 	then
-		printf "\033[0;41;37mFix coding standards before commit!\033[0m\n"
+		printf "\033[0;41;37m   Fix coding standards before commit!   \033[0m\n"
 		exit 1
+	else
+	    printf "\033[0;43;30m   Consider fixing WARNINGs   \033[0m\n"
+        printf "\033[0;42;30m   Code checked   \033[0m\n"
 	fi
 fi
 ### coding-standard-101 -end

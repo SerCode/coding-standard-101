@@ -57,7 +57,7 @@ After you run **composer update** or **composer install** just run:
 ```
 composer cs-install-prehook
 ```
-**For proper usage all features zou have to run this script**
+**For proper use of all features you have to run this script**
 
 
 *If you don't change path to `ruleset.xml` (see bellow), you don't need to run this script again*

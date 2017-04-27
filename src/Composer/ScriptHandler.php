@@ -209,15 +209,9 @@ final class ScriptHandler
 	 */
 	public static function createFixCsCommitScript($rulesetPath)
 	{
+		echo 'Creating sh script for fixing commiting files'. PHP_EOL;
 		$pathToScript = __DIR__ . DIRECTORY_SEPARATOR . self::SH_SCRIPTS_FOLDER . DIRECTORY_SEPARATOR . self::FIX_CS_COMMIT_SCRIPT;
 
-		$path = __DIR__ . DIRECTORY_SEPARATOR . self::SH_SCRIPTS_FOLDER;
-		/*var_dump($path);
-		var_dump(is_dir($path));
-//		var_dump(__DIR__);
-		var_dump($pathToScript);
-//		var_dump(is_dir(DIRECTORY_SEPARATOR . self::SH_SCRIPTS_FOLDER));
-		var_dump(file_exists($pathToScript));*/
 		$templateContent = file_get_contents(__DIR__ . '/templates/phpcbf/fix-commit-file');
 		$templateContent = sprintf($templateContent, $rulesetPath);
 

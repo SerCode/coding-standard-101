@@ -49,7 +49,7 @@ final class ScriptHandler
 			}
 		} else {
 			echo 'Creating file and inserting pre-comit hook ...' . PHP_EOL;
-			file_put_contents($originFile, $templateContent);
+			file_put_contents($originFile,self::BASH_START . PHP_EOL . PHP_EOL .$templateContent);
 		}
 		chmod($originFile, 0755);
 	}

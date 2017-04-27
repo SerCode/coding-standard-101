@@ -79,6 +79,7 @@ Just add some code:
 }
 ```
 
+
 This secure install git commit prehook every time when you run  **composer update** or **composer install**.
 
 *First case is starts after you run composer install, second when composer update and install prehook with path to `ruleset.xml`. For more information see below.*

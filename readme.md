@@ -99,10 +99,10 @@ To `composer.json` put:
   ]
 }
 ```
-and run
- ```
- composer fix-cs-commit
- ```
+and run 
+```
+composer fix-cs-commit
+``` 
 
 ***
 ## Advanced usage
@@ -115,6 +115,38 @@ Create confgi file `.csStandard` with path to ruleset, inport differetn packages
 standards and use them in your `ruleset.xml`.
 
 ....
+
+***
+## Setup for MALL
+
+add to `composer.json` to section require-dev `"sercode/coding-standard-101": "^0.1"` and add block
+
+
+```
+"scripts": {
+    "cs-install-prehook": [
+        "SerCode\\CodingStandard101\\Composer\\ScriptHandler::addPhpCsToPreCommitHook"
+    ],
+    "fix-cs-commit": [
+        "SerCode\\CodingStandard101\\Composer\\ScriptHandler::fixCsCommit"
+    ]
+}
+```
+
+in root of project create file `.csStandard` with content
+```
+[ruleset]
+0 = phpcs-ruleset.xml
+```
+
+run `composer cs-install-prehook` for install
+
+for fix commitig files run script
+```
+composer fix-cs-commit
+```
+** Files for fix (or check) MUST be in stage. That means dont commit with adding all files by `-a` option *(git commit -a -m "commit message")* **
+
 
 
 ***
